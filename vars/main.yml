@@ -1,0 +1,3 @@
+---
+goland_downloads_url: "https://golang.org/dl/"
+golang_regex_latest_url: 'https:\\/\\/dl\\.google\\.com\\/go\\/go[0-9]+\\.[0-9]+\\.[0-9]+\\.linux-amd64\\.tar\\.gz'

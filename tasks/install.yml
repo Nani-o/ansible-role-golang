@@ -1,0 +1,6 @@
+---
+- name: Download and install go release
+  unarchive:
+    src: "{{ golang_release_download_url }}"
+    dest: /usr/local/
+    remote_src: yes

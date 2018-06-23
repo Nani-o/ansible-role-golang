@@ -1,0 +1,18 @@
+---
+- hosts: container
+  tasks:
+    - name: Copy a source go file
+      copy:
+        src: hello.go
+        dest: ~/
+
+    - name: Build with go tools
+      shell: "/usr/local/go/bin/go build"
+
+    - name: Try the executable
+      shell: "./hello"
+      register: exe_output
+
+    - name: Fail if not correct output
+      fail:
+      when: exe_output.stdout == 'hello, world'
