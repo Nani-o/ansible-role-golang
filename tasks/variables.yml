@@ -1,11 +1,10 @@
 ---
 - name: Retrieve the releases url from {{ goland_downloads_url }}
   uri:
-    url: "{{ goland_downloads_url }}
+    url: "{{ goland_downloads_url }}"
     return_content: yes
   register: dl_webpage
 
 - name: Get the release download url
   set_fact:
     golang_release_download_url: "{{ dl_webpage.content | regex_findall(golang_regex_latest_url) | first }}"
-
