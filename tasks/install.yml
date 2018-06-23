@@ -1,4 +1,9 @@
 ---
+- name: Make sur tar is installed
+  package:
+    name: tar
+    state: latest
+
 - name: Download and install go release
   unarchive:
     src: "{{ golang_release_download_url }}"
