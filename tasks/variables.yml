@@ -4,6 +4,8 @@
     url: "{{ goland_downloads_url }}"
     return_content: yes
   register: dl_webpage
+  delegate_to: localhost
+  run_once: yes
 
 - name: Get the release download url
   set_fact:
