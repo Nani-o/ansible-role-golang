@@ -1,7 +1,9 @@
 ---
-- name: Make sur tar is installed
+- name: Make sur tar and git are installed
   package:
-    name: tar
+    name:
+      - tar
+      - git
     state: latest
 
 - name: Download and install go release
